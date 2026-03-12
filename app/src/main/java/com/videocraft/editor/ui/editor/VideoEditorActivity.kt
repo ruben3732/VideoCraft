@@ -169,7 +169,7 @@ class VideoEditorActivity : AppCompatActivity() {
         binding.tabAspectRatio.root.setOnClickListener { showPanel(PanelType.ASPECT_RATIO) }
         binding.tabCaptions.root.setOnClickListener { openCaptionActivity() }
         binding.tabStock.root.setOnClickListener { openStockMediaActivity() }
-        binding.tabAI.root.setOnClickListener { openAIEditActivity() }
+        binding.tabAi.root.setOnClickListener { openAIEditActivity() }
         binding.tabKeyframe.root.setOnClickListener { showPanel(PanelType.KEYFRAME) }
         binding.tabVolume.root.setOnClickListener { showPanel(PanelType.VOLUME) }
 
