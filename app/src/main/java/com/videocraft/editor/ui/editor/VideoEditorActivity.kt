@@ -161,17 +161,17 @@ class VideoEditorActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(sb: SeekBar?) { player?.play() }
         })
 
-        // Tool tabs
-        binding.tabSpeed.setOnClickListener { showPanel(PanelType.SPEED) }
-        binding.tabAudio.setOnClickListener { showPanel(PanelType.AUDIO) }
-        binding.tabText.setOnClickListener { showPanel(PanelType.TEXT) }
-        binding.tabOverlay.setOnClickListener { showPanel(PanelType.OVERLAY) }
-        binding.tabAspectRatio.setOnClickListener { showPanel(PanelType.ASPECT_RATIO) }
-        binding.tabCaptions.setOnClickListener { openCaptionActivity() }
-        binding.tabStock.setOnClickListener { openStockMediaActivity() }
-        binding.tabAI.setOnClickListener { openAIEditActivity() }
-        binding.tabKeyframe.setOnClickListener { showPanel(PanelType.KEYFRAME) }
-        binding.tabVolume.setOnClickListener { showPanel(PanelType.VOLUME) }
+        // Tool tabs — binding.tabX is ItemToolTabBinding, so use .root to get the View
+        binding.tabSpeed.root.setOnClickListener { showPanel(PanelType.SPEED) }
+        binding.tabAudio.root.setOnClickListener { showPanel(PanelType.AUDIO) }
+        binding.tabText.root.setOnClickListener { showPanel(PanelType.TEXT) }
+        binding.tabOverlay.root.setOnClickListener { showPanel(PanelType.OVERLAY) }
+        binding.tabAspectRatio.root.setOnClickListener { showPanel(PanelType.ASPECT_RATIO) }
+        binding.tabCaptions.root.setOnClickListener { openCaptionActivity() }
+        binding.tabStock.root.setOnClickListener { openStockMediaActivity() }
+        binding.tabAI.root.setOnClickListener { openAIEditActivity() }
+        binding.tabKeyframe.root.setOnClickListener { showPanel(PanelType.KEYFRAME) }
+        binding.tabVolume.root.setOnClickListener { showPanel(PanelType.VOLUME) }
 
         // Add media
         binding.btnAddVideo.setOnClickListener { videoPicker.launch("video/*") }
