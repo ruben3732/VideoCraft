@@ -91,6 +91,22 @@ class AIEditActivity : AppCompatActivity() {
             .show()
     }
 
+    private fun showAnalysisResults(state: AIEditState.Complete) {
+        val suggestion = viewModel.suggestion.value
+        val savedSecs = suggestion?.totalSavedMs?.div(1000) ?: 0
+        val msg = if (state.outputUri != null) {
+            "✅ Done! Saved ~${savedSecs}s of dead air.\n\nEdited video saved to your gallery."
+        } else {
+            "✅ Analysis complete!\n\nNo significant cuts were needed."
+        }
+        binding.tvStatus.text = msg
+        AlertDialog.Builder(this)
+            .setTitle("AI Edit Complete")
+            .setMessage(msg)
+            .setPositiveButton("Great!") { d, _ -> d.dismiss() }
+            .show()
+    }
+
     private fun observeViewModel() {
         viewModel.analysisState.observe(this) { state ->
             when (state) {
