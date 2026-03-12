@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Video camera body -->
+    <path
+        android:fillColor="#7C4DFF"
+        android:pathData="M54,30 C39.64,30 28,41.64 28,56 C28,70.36 39.64,82 54,82 C68.36,82 80,70.36 80,56 C80,41.64 68.36,30 54,30 Z" />
+    <!-- Play triangle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M47,44 L47,68 L68,56 Z" />
+</vector>
