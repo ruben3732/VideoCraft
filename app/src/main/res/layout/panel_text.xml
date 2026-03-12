@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_surface_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter text..."
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Bold / Italic -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ToggleButton
+                android:id="@+id/btn_bold"
+                android:layout_width="64dp"
+                android:layout_height="36dp"
+                android:text="B"
+                android:textOn="B"
+                android:textOff="B"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp" />
+
+            <ToggleButton
+                android:id="@+id/btn_italic"
+                android:layout_width="64dp"
+                android:layout_height="36dp"
+                android:text="I"
+                android:textOn="I"
+                android:textOff="I"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <!-- Font size -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Font Size"
+                android:textColor="@color/text_secondary" />
+            <TextView
+                android:id="@+id/tv_font_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40sp"
+                android:textColor="@color/accent" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seekbar_font_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Color row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <View android:id="@+id/btn_color_white"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:background="#FFFFFF" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/btn_color_black"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:background="#000000" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/btn_color_yellow"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:background="#FFEB3B" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/btn_color_red"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:background="#F44336" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/btn_color_blue"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:background="#2196F3" android:layout_marginEnd="8dp" />
+            <View android:id="@+id/btn_color_green"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:background="#4CAF50" />
+        </LinearLayout>
+
+        <!-- Font chips -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Font" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none" android:layout_marginBottom="8dp">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_fonts"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:singleSelection="true" />
+        </HorizontalScrollView>
+
+        <!-- Style chips -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Style" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none" android:layout_marginBottom="8dp">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_text_styles"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                app:singleSelection="true" />
+        </HorizontalScrollView>
+
+        <!-- Emojis -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Emojis" android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:scrollbars="none" android:layout_marginBottom="12dp">
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_emojis"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+ Add Text to Video"
+            app:cornerRadius="8dp"
+            android:backgroundTint="@color/primary" />
+
+    </LinearLayout>
+</ScrollView>

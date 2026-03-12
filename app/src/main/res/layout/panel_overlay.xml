@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/bg_surface_2">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pick_overlay_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+ Pick Image / GIF Overlay"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Opacity" android:textColor="@color/text_secondary" />
+        <TextView android:id="@+id/tv_opacity_label"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="100%" android:textColor="@color/accent" />
+    </LinearLayout>
+    <SeekBar android:id="@+id/seekbar_opacity" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginBottom="4dp">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Scale" android:textColor="@color/text_secondary" />
+        <TextView android:id="@+id/tv_scale_label"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="1.0x" android:textColor="@color/accent" />
+    </LinearLayout>
+    <SeekBar android:id="@+id/seekbar_overlay_scale" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginBottom="8dp" />
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Rotation" android:textColor="@color/text_secondary" android:layout_marginBottom="4dp" />
+    <SeekBar android:id="@+id/seekbar_overlay_rotation" android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

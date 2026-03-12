@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_margin="2dp">
+
+    <ImageView
+        android:id="@+id/iv_media_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@color/bg_surface_2" />
+
+    <!-- Type indicator bar -->
+    <View
+        android:id="@+id/v_type_indicator"
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
+
+    <!-- Duration badge (videos) -->
+    <TextView
+        android:id="@+id/tv_duration_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="6dp"
+        android:text="15s"
+        android:textSize="11sp"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_dark_pill"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:visibility="gone" />
+
+    <!-- Attribution -->
+    <TextView
+        android:id="@+id/tv_attribution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="Pexels"
+        android:textSize="9sp"
+        android:textColor="@color/white"
+        android:background="#80000000"
+        android:padding="4dp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</FrameLayout>

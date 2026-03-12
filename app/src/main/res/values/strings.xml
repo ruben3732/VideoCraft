@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VideoCraft</string>
+    <string name="app_tagline">Pro Video Editor</string>
+
+    <!-- Home -->
+    <string name="import_video">Import Video</string>
+    <string name="import_image">Import Image</string>
+    <string name="blank_project">Blank Project</string>
+    <string name="recent_videos">Recent Videos</string>
+    <string name="no_recent_videos">No recent videos.\nImport one to get started!</string>
+
+    <!-- Editor -->
+    <string name="edit_video">Edit Video</string>
+    <string name="export">Export</string>
+    <string name="export_complete">Export Complete!</string>
+    <string name="save_to_gallery">Save to Gallery</string>
+    <string name="share">Share</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="add_video">Add Video</string>
+    <string name="add_image">Add Image</string>
+    <string name="add_audio">Add Audio</string>
+    <string name="split">Split</string>
+    <string name="delete">Delete</string>
+    <string name="mute">Mute</string>
+    <string name="unmute">Unmute</string>
+
+    <!-- Tools -->
+    <string name="tool_speed">Speed</string>
+    <string name="tool_audio">Audio</string>
+    <string name="tool_text">Text</string>
+    <string name="tool_overlay">Overlay</string>
+    <string name="tool_ratio">Ratio</string>
+    <string name="tool_captions">Captions</string>
+    <string name="tool_stock">Stock</string>
+    <string name="tool_ai">AI Edit</string>
+    <string name="tool_keyframe">Keyframe</string>
+    <string name="tool_volume">Volume</string>
+
+    <!-- Caption -->
+    <string name="auto_captions">Auto Captions</string>
+    <string name="generate_captions">Generate Captions</string>
+    <string name="save_captions">Save</string>
+    <string name="caption_language">Caption Language</string>
+    <string name="caption_style">Caption Style</string>
+    <string name="caption_font">Caption Font</string>
+    <string name="hinglish_info">Hinglish: English + Hindi in Roman script</string>
+
+    <!-- Stock -->
+    <string name="stock_library">Stock Library</string>
+    <string name="search_media">Search photos, videos, GIFs…</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+    <string name="gifs">GIFs</string>
+    <string name="powered_by_pexels">Powered by Pexels, Pixabay &amp; Giphy</string>
+
+    <!-- AI Edit -->
+    <string name="ai_smart_edit">⚡ AI Smart Edit</string>
+    <string name="ai_one_click">1-Click AI Edit</string>
+    <string name="ai_desc">Automatically removes pauses, fillers, and tightens your video</string>
+    <string name="remove_silence">Remove Silence</string>
+    <string name="remove_fillers">Remove Filler Words</string>
+    <string name="suggest_broll">Suggest B-roll</string>
+    <string name="auto_captions_ai">Auto-Captions</string>
+    <string name="add_sound_fx">Add Sound FX</string>
+
+    <!-- Permissions -->
+    <string name="permission_required">Permissions Required</string>
+    <string name="permission_storage">Storage access is needed to load your videos and images.</string>
+    <string name="permission_audio">Microphone access is needed for caption generation.</string>
+
+    <!-- Aspect ratio -->
+    <string name="ratio_9_16">9:16 · Reels / TikTok</string>
+    <string name="ratio_16_9">16:9 · YouTube</string>
+    <string name="ratio_1_1">1:1 · Instagram Square</string>
+    <string name="ratio_4_5">4:5 · Instagram Feed</string>
+    <string name="ratio_4_3">4:3 · Traditional</string>
+    <string name="ratio_21_9">21:9 · Cinematic</string>
+
+    <!-- Errors -->
+    <string name="error_no_video">Add a video clip first</string>
+    <string name="error_export_failed">Export failed. Please try again.</string>
+    <string name="error_caption_failed">Caption generation failed</string>
+    <string name="error_no_api_key">API key not configured. Please add it in gradle.properties</string>
+</resources>

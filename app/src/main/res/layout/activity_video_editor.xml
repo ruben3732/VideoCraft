@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:gravity="center_vertical"
+        android:background="@color/bg_surface"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/text_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit Video"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginStart="8dp" />
+
+        <ImageButton
+            android:id="@+id/btn_undo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_undo"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/text_primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_export"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Export"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            app:cornerRadius="20dp"
+            android:backgroundTint="@color/accent" />
+    </LinearLayout>
+
+    <!-- Video Preview -->
+    <FrameLayout
+        android:id="@+id/preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintBottom_toTopOf="@id/panel_container"
+        app:layout_constraintVertical_weight="1">
+
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:use_controller="false"
+            app:resize_mode="fit" />
+
+        <!-- Overlay canvas for text/image overlays -->
+        <com.videocraft.editor.ui.editor.OverlayCanvasView
+            android:id="@+id/overlay_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <!-- Panel Container -->
+    <FrameLayout
+        android:id="@+id/panel_container"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/bg_surface_2"
+        app:layout_constraintBottom_toTopOf="@id/timeline_container" />
+
+    <!-- Timeline -->
+    <LinearLayout
+        android:id="@+id/timeline_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_surface"
+        app:layout_constraintBottom_toTopOf="@id/bottom_toolbar">
+
+        <!-- Time display + seek bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00.00"
+                android:textSize="12sp"
+                android:textColor="@color/accent"
+                android:fontFamily="monospace" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_timeline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="8dp" />
+
+            <TextView
+                android:id="@+id/tv_total_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00.00"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+
+        <!-- Timeline view -->
+        <com.videocraft.editor.ui.editor.timeline.TimelineView
+            android:id="@+id/timeline_view"
+            android:layout_width="match_parent"
+            android:layout_height="140dp" />
+
+        <!-- Playback controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/btn_add_video"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_add_video"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/text_secondary"
+                android:contentDescription="Add Video" />
+
+            <ImageButton
+                android:id="@+id/btn_add_image"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_add_image"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/text_secondary"
+                android:layout_marginStart="8dp"
+                android:contentDescription="Add Image" />
+
+            <ImageButton
+                android:id="@+id/btn_play"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/ic_play"
+                android:background="@drawable/bg_play_button"
+                android:tint="@color/white"
+                android:layout_marginHorizontal="16dp"
+                android:contentDescription="Play / Pause" />
+
+            <ImageButton
+                android:id="@+id/btn_add_audio"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_music"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/text_secondary"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Add Audio" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Toolbar (tools) -->
+    <HorizontalScrollView
+        android:id="@+id/bottom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:scrollbars="none"
+        android:background="@color/bg_surface"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="8dp">
+
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_speed" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_audio" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_text" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_overlay" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_aspect_ratio" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_captions" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_stock" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_ai" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_keyframe" />
+            <include layout="@layout/item_tool_tab"
+                android:id="@+id/tab_volume" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Export Progress overlay -->
+    <LinearLayout
+        android:id="@+id/export_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_surface"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Exporting video..."
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center" />
+
+        <ProgressBar
+            android:id="@+id/export_progress_bar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/tv_export_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textColor="@color/accent"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

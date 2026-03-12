@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius">24dp</dimen>
+    <dimen name="chip_corner_radius">16dp</dimen>
+
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="timeline_height">140dp</dimen>
+    <dimen name="bottom_toolbar_height">64dp</dimen>
+    <dimen name="panel_height">180dp</dimen>
+    <dimen name="player_preview_min_height">180dp</dimen>
+
+    <dimen name="text_size_xs">10sp</dimen>
+    <dimen name="text_size_sm">12sp</dimen>
+    <dimen name="text_size_md">14sp</dimen>
+    <dimen name="text_size_lg">16sp</dimen>
+    <dimen name="text_size_xl">20sp</dimen>
+    <dimen name="text_size_title">28sp</dimen>
+</resources>

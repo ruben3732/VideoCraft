@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# API keys — never commit these
+# PEXELS_API_KEY, PIXABAY_API_KEY, GIPHY_API_KEY go in gradle.properties (local only)

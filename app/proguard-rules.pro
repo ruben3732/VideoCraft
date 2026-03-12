@@ -1,0 +1,7 @@
+-keep class com.arthenica.ffmpegkit.** { *; }
+-keep class com.videocraft.editor.data.model.** { *; }
+-keep class com.videocraft.editor.data.api.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontwarn okhttp3.**
+-dontwarn retrofit2.**

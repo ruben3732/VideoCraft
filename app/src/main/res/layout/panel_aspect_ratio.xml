@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/bg_surface_2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aspect Ratio"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ratio_9_16"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="9:16\nReels"
+            android:textSize="12sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ratio_16_9"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="16:9\nYouTube"
+            android:textSize="12sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ratio_1_1"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="1:1\nSquare"
+            android:textSize="12sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ratio_4_5"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="4:5\nIG Feed"
+            android:textSize="12sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ratio_4_3"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="4:3\nTraditional"
+            android:textSize="12sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ratio_21_9"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="4dp"
+            android:text="21:9\nCinematic"
+            android:textSize="12sp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+    </GridLayout>
+
+</LinearLayout>

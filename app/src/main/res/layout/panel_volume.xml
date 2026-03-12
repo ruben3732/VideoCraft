@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/bg_surface_2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume Control"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_video_volume_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Video: 100%"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="4dp" />
+
+    <SeekBar
+        android:id="@+id/seekbar_video_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_bg_music_volume_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music: 80%"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="4dp" />
+
+    <SeekBar
+        android:id="@+id/seekbar_bg_music_volume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

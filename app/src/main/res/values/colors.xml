@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand colors -->
+    <color name="primary">#6200EE</color>
+    <color name="primary_variant">#3700B3</color>
+    <color name="secondary">#03DAC5</color>
+    <color name="secondary_variant">#018786</color>
+    <color name="accent">#FF4081</color>
+    <color name="accent_dark">#C60055</color>
+
+    <!-- Backgrounds (dark theme) -->
+    <color name="bg_dark">#0D0D1A</color>
+    <color name="bg_surface">#16162A</color>
+    <color name="bg_surface_2">#1E1E35</color>
+    <color name="bg_surface_3">#252545</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#AAAACC</color>
+    <color name="text_hint">#555577</color>
+
+    <!-- Status -->
+    <color name="error">#CF6679</color>
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+
+    <!-- Misc -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="divider">#2A2A4A</color>
+    <color name="timeline_bg">#1A1A2E</color>
+    <color name="timeline_clip">#6200EE</color>
+    <color name="timeline_audio">#FFAB40</color>
+    <color name="timeline_overlay">#03DAC5</color>
+    <color name="timeline_playhead">#FF4081</color>
+    <color name="keyframe_diamond">#FFD740</color>
+</resources>
