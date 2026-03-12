@@ -192,11 +192,9 @@ class VideoEditorActivity : AppCompatActivity() {
 
         val panel = when (type) {
             PanelType.SPEED -> SpeedControlPanel(this, viewModel)
-            PanelType.AUDIO -> AudioPanel(this, viewModel) { audioPicker.launch("audio/*") }
+            PanelType.AUDIO -> AudioPanel(this, viewModel, onPickAudio = { audioPicker.launch("audio/*") })
             PanelType.TEXT -> TextPanel(this, viewModel)
-            PanelType.OVERLAY -> OverlayPanel(this, viewModel) {
-                imagePicker.launch("image/*")
-            }
+            PanelType.OVERLAY -> OverlayPanel(this, viewModel, onPickImage = { imagePicker.launch("image/*") })
             PanelType.ASPECT_RATIO -> AspectRatioPanel(this, viewModel)
             PanelType.KEYFRAME -> KeyframePanel(this, viewModel)
             PanelType.VOLUME -> VolumePanel(this, viewModel)
